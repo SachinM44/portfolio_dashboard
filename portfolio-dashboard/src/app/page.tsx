@@ -33,11 +33,11 @@ export default function Home() {
   }, [fetchData]);
 
   return (
-    <div className="min-h-screen bg-gray-300 py-10 px-10">
+    <div className="min-h-screen bg-gray-300 p-3">
         <header className="flex flex-row justify-center pb-4">
           <div>
-            <h1 className="text-2xl font-bold rounded-lg p-4 text-gray-800">Portfolio Dashboard</h1>
-            <p className="text-sm text-gray-600 pb-10 mt-25">Real-time stock tracking</p>
+            <h1 className="text-2xl font-bold text-gray-800">Portfolio Dashboard</h1>
+            <p className="text-sm text-gray-600 pl-10 ">Real-time stock tracking</p>
           </div>
         </header>
 
@@ -48,16 +48,16 @@ export default function Home() {
         )}
 
         {portfolioData && (
-          <div className="mb-4 flex gap-4">
-            <div className="bg-white border border-gray-300 rounded px-4 py-3">
+          <div className="mb-4 flex justify-center gap-4">
+            <div className="bg-white border border-gray-300 rounded-lg px-4 py-3">
               <p className="text-xs text-gray-500 uppercase">Total Investment</p>
               <p className="text-lg font-bold text-gray-800">{formatCurrency(portfolioData.totalInvestment)}</p>
             </div>
-            <div className="bg-white border border-gray-300 rounded px-4 py-3">
+            <div className="bg-white border border-gray-300 rounded-lg px-4 py-3">
               <p className="text-xs text-gray-500 uppercase">Present Value</p>
               <p className="text-lg font-bold text-gray-800">{formatCurrency(portfolioData.totalPresentValue)}</p>
             </div>
-            <div className="bg-white border border-gray-300 rounded px-4 py-3">
+            <div className="bg-white border border-gray-300 rounded-lg px-4 py-3">
               <p className="text-xs text-gray-500 uppercase">Total Gain/Loss</p>
               <p className={`text-lg font-bold ${portfolioData.totalGainLoss && portfolioData.totalGainLoss >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 {formatCurrency(portfolioData.totalGainLoss)}
@@ -74,9 +74,7 @@ export default function Home() {
           <PortfolioTable data={portfolioData} />
         ) : null}
 
-        <footer className="mt-4 text-center text-xs text-gray-400">
-          Data refreshes every 15 seconds
-        </footer>
+       
     </div>
   );
 }
