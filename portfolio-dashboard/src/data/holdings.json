@@ -1,0 +1,60 @@
+{
+  "sectors": [
+    {
+      "name": "Financial Sector",
+      "stocks": [
+        { "id": "1", "name": "HDFC Bank", "purchasePrice": 1490, "qty": 50, "exchange": "HDFCBANK" },
+        { "id": "2", "name": "Bajaj Finance", "purchasePrice": 6466, "qty": 15, "exchange": "BAJFINANCE" },
+        { "id": "3", "name": "ICICI Bank", "purchasePrice": 790, "qty": 94, "exchange": "ICICIBANK" },
+        { "id": "4", "name": "Bajaj Housing", "purchasePrice": 150, "qty": 504, "exchange": "BAJAJHFL" },
+        { "id": "5", "name": "Shriram Financials", "purchasePrice": 24, "qty": 1080, "exchange": "SHRIRAMFIN" }
+      ]
+    },
+    {
+      "name": "Tech Sector",
+      "stocks": [
+        { "id": "6", "name": "Affle India", "purchasePrice": 1151, "qty": 50, "exchange": "AFFLE" },
+        { "id": "7", "name": "LTI Mindtree", "purchasePrice": 4775, "qty": 16, "exchange": "LTIM" },
+        { "id": "8", "name": "KPI Tech", "purchasePrice": 672, "qty": 61, "exchange": "KPITTECH" },
+        { "id": "9", "name": "Tata Tech", "purchasePrice": 1072, "qty": 63, "exchange": "TATATECH" },
+        { "id": "10", "name": "BFSI Services", "purchasePrice": 232, "qty": 191, "exchange": "BSOFT" },
+        { "id": "11", "name": "Tarla", "purchasePrice": 1134, "qty": 45, "exchange": "TANLA" }
+      ]
+    },
+    {
+      "name": "Consumer",
+      "stocks": [
+        { "id": "12", "name": "Dmart", "purchasePrice": 3777, "qty": 27, "exchange": "DMART" },
+        { "id": "13", "name": "Tata Consumer", "purchasePrice": 845, "qty": 90, "exchange": "TATACONSUM" },
+        { "id": "14", "name": "Pidilite", "purchasePrice": 2378, "qty": 36, "exchange": "PIDILITIND" }
+      ]
+    },
+    {
+      "name": "Power",
+      "stocks": [
+        { "id": "15", "name": "Tata Power", "purchasePrice": 224, "qty": 225, "exchange": "TATAPOWER" },
+        { "id": "16", "name": "KPI Green", "purchasePrice": 875, "qty": 50, "exchange": "KPIGREEN" },
+        { "id": "17", "name": "Suzlon", "purchasePrice": 44, "qty": 450, "exchange": "SUZLON" },
+        { "id": "18", "name": "Gensol", "purchasePrice": 898, "qty": 45, "exchange": "GENSOL" }
+      ]
+    },
+    {
+      "name": "Pipe Sector",
+      "stocks": [
+        { "id": "19", "name": "Finolex Pipes", "purchasePrice": 580, "qty": 60, "exchange": "FINPIPE" },
+        { "id": "20", "name": "Astral", "purchasePrice": 1517, "qty": 56, "exchange": "ASTRAL" },
+        { "id": "21", "name": "Polycab", "purchasePrice": 2818, "qty": 28, "exchange": "POLYCAB" }
+      ]
+    },
+    {
+      "name": "Others",
+      "stocks": [
+        { "id": "22", "name": "Clean Science", "purchasePrice": 1610, "qty": 32, "exchange": "CLEAN" },
+        { "id": "23", "name": "Deepak Nitrite", "purchasePrice": 2248, "qty": 27, "exchange": "DEEPAKNTR" },
+        { "id": "24", "name": "Fine Organics", "purchasePrice": 4284, "qty": 16, "exchange": "FINEORG" },
+        { "id": "25", "name": "Gravita", "purchasePrice": 2037, "qty": 8, "exchange": "GRAVITA" },
+        { "id": "26", "name": "SBI Life", "purchasePrice": 1197, "qty": 49, "exchange": "SBILIFE" }
+      ]
+    }
+  ]
+}
