@@ -17,7 +17,7 @@ export function SectorGroup({ sector, startIndex }: SectorGroupProps) {
     return (
         <>
             <tr
-                className="bg-gray-100 border-t border-gray-300 cursor-pointer hover:bg-gray-200"
+                className="bg-gray-100 border-t border-gray-300 cursor-pointer hover:bg-gray-300"
                 onClick={() => setIsExpanded(!isExpanded)}
             >
                 <td colSpan={2} className="px-3 py-2">

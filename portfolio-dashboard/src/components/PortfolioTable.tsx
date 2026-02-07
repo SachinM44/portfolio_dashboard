@@ -12,7 +12,7 @@ export function PortfolioTable({ data }: PortfolioTableProps) {
     let currentIndex = 0;
 
     return (
-        <div className="bg-white border border-gray-300 rounded overflow-hidden">
+        <div className="bg-white border border-gray-600 rounded overflow-hidden">
             <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                     <thead>
@@ -22,7 +22,7 @@ export function PortfolioTable({ data }: PortfolioTableProps) {
                             <th className="px-3 py-2 text-right font-medium border-r border-gray-700">Purchase Price</th>
                             <th className="px-3 py-2 text-right font-medium border-r border-gray-700">Qty</th>
                             <th className="px-3 py-2 text-right font-medium border-r border-gray-700">Investment</th>
-                            <th className="px-3 py-2 text-right font-medium border-r border-gray-700">Portfolio %</th>
+                            <th className="px-3 py-2 text-right font-medium border-r border-gray-800">Portfolio %</th>
                             <th className="px-3 py-2 text-center font-medium border-r border-gray-700">NSE/BSE</th>
                             <th className="px-3 py-2 text-right font-medium border-r border-gray-700">CMP</th>
                             <th className="px-3 py-2 text-right font-medium border-r border-gray-700">Present Value</th>

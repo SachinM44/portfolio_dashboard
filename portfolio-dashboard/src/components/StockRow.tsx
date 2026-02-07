@@ -11,7 +11,7 @@ interface StockRowProps {
 
 function StockRowComponent({ stock, index }: StockRowProps) {
     return (
-        <tr className="border-t border-gray-200 hover:bg-gray-50">
+        <tr className="border-t border-gray-200 hover:bg-gray-100">
             <td className="px-3 py-2 text-gray-600">{index}</td>
             <td className="px-3 py-2 text-gray-800">{stock.name}</td>
             <td className="px-3 py-2 text-right text-gray-700">{formatCurrency(stock.purchasePrice)}</td>
