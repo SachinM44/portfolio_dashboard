@@ -21,13 +21,10 @@ export async function fetchGoogleFinanceData(symbol: string): Promise<GoogleFina
         let peRatio: number | null = null;
         let latestEarnings: string | null = null;
 
-        // Find P/E ratio
         $('[data-source="P/E ratio"]').each((_, el) => {
             const value = $(el).parent().find('[class*="P6K39c"]').text();
             if (value) peRatio = parseFloat(value.replace(/,/g, ''));
         });
-
-        // Find EPS (Earnings Per Share)
         $('[data-source="EPS"]').each((_, el) => {
             const value = $(el).parent().find('[class*="P6K39c"]').text();
             if (value) latestEarnings = '₹' + value;
@@ -45,7 +42,6 @@ export async function fetchAllGoogleData(symbols: string[]): Promise<Map<string,
     for (const symbol of symbols) {
         const data = await fetchGoogleFinanceData(symbol);
         results.set(symbol, data);
-        // Small delay to avoid rate limiting
         await new Promise(resolve => setTimeout(resolve, 200));
     }
 

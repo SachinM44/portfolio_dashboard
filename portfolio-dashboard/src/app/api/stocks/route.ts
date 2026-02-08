@@ -19,7 +19,6 @@ interface RawSector {
 
 export async function GET() {
     try {
-        // Get all stock symbols
         const allSymbols: string[] = [];
         (holdingsData.sectors as RawSector[]).forEach(sector => {
             sector.stocks.forEach(stock => {
@@ -27,10 +26,9 @@ export async function GET() {
             });
         });
 
-        // Fetch data from both APIs in parallel
         const [yahooQuotes, googleData] = await Promise.all([
-            fetchAllStockPrices(allSymbols),     // CMP + P/E + EPS from Yahoo
-            fetchAllGoogleData(allSymbols)        // P/E & Earnings from Google (fallback)
+            fetchAllStockPrices(allSymbols),
+            fetchAllGoogleData(allSymbols)
         ]);
 
         let totalInvestment = 0;
@@ -45,17 +43,12 @@ export async function GET() {
                 sectorInvestment += investment;
                 totalInvestment += investment;
 
-                // Get data from Yahoo Finance
                 const yahoo = yahooQuotes.get(stock.exchange);
                 const google = googleData.get(stock.exchange);
 
-                // CMP from Yahoo
                 const cmp = yahoo?.cmp ?? null;
 
-                // P/E: Try Yahoo first, then Google as fallback
                 const peRatio = yahoo?.peRatio ?? google?.peRatio ?? null;
-
-                // Latest Earnings (EPS): Try Yahoo first, then Google as fallback
                 let latestEarnings: string | null = null;
                 if (yahoo?.eps) {
                     latestEarnings = `₹${yahoo.eps.toFixed(2)}`;
@@ -97,7 +90,6 @@ export async function GET() {
             };
         });
 
-        // Calculate portfolio percentage
         sectors.forEach(sector => {
             sector.stocks.forEach(stock => {
                 stock.portfolioPercent = (stock.investment / totalInvestment) * 100;
